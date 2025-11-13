@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ma première app AR</title>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> 
+</head>
+
+<body>
+    <a-scene embedded
+    arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; trackingMethod: best ; changeMatrixMode: modelViewMatrix;"
+    renderer="sortObjects: true; antialias: true; colorManagement: true; logarithmicDepthBuffer: true;"
+
+    vr-mode-ui="enabled: false"
+
+    smooth=" true" smoothCount="5" smoothTolerance=".05" smoothThreshold="5"
+    
+    sourceWidth="800" sourceHeight="600" displayWidth="1280" displayHeight="720">
+
+          <a-marker type='barcode' value='0'>
+            <a-image src="https://c.files.bbci.co.uk/7CC2/production/_118283913_29xp-meme-mobilemasterat3x-v3.jpg"
+            side="double" position = "0 0 -1" rotation="270 0 0" 
+            width="2">
+            </a-image>
+   
+            <a-text value="Solene se ruine au distributeur" 
+            side="double" position = "0 0 -1" rotation="270 0 0" 
+            width="8"
+            color="whitecloud" align="right" >
+            </a-text>
+
+            <a-text value="tu fais equipe avec nous?" 
+            side="double" position = "0 1 0" rotation="270 0 0" 
+            width="8"
+            color="blue" align="center" >
+            </a-text>
+
+          </a-marker>
+
+        <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
